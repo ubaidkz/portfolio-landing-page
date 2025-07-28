@@ -1,0 +1,478 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+     
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    
+}
+
+.nav{
+    height: 11%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+    border-bottom: 1px solid #dadada;
+    position: sticky;
+}
+
+.nav .logo{
+    padding: 0 2vw;
+    color: #55E4A5;
+}
+.nav h2{
+    font-size: 2.6vw;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.nav ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.nav ul li a{
+    position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #55E4A5; /* your underline color */
+  transition: width 0.6s ease;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.nav .menu{
+    display: flex;
+    cursor: pointer;
+    gap: 4vw;
+}
+.nav .menu a{
+    text-decoration: none;
+    color: #000;
+}
+
+ button{
+    background-color: #55E4A5;
+    color: aliceblue;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+}
+.nav button a{
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+
+
+
+
+.section-1{
+    height: calc(100% - 11%);
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+      margin-top: 15vh;
+    width: 52%;
+    height: 100%;
+    padding: 5vw 5vw;
+
+}
+.left h1{
+    font-size: 3.5vw;
+    line-height: 8vh;
+}
+
+.left h3{
+    font-size: 2.5vw;
+    line-height: 8vh;
+    margin-top: 3vh;
+}
+
+.span-text {
+  position: relative;
+  height: 45px; /* set height to avoid layout shift */
+  overflow: hidden;
+}
+
+.span-text span {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: fadeText 8s infinite;
+  text-align: center;
+}
+
+.span-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.span-text span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+@keyframes fadeText {
+    0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+
+
+.left p{
+    padding-top: 3vw;
+    font-weight: 300;
+}
+
+.left span{
+    color: #55E4A5;
+}
+.left button{
+    margin-top: 10vh;
+    width: 10vw;
+    height: 8vh;
+}
+
+.right{
+    width: 48%;
+    height: 100%;
+    
+}
+.right img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.icons{
+    margin-top: 3vh;
+    margin-left: 10vh;
+    
+}
+.icons a{
+    text-decoration: none;
+}
+
+.icons i{
+    font-size: 30px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #000;
+    
+}
+.icons button{
+  height: 7vh;
+  width: 25vw;
+  display: none;
+}
+.icons button a{
+  text-decoration: none;
+  color: #fff;
+}
+.ri-linkedin-fill{
+    color: #0077B5 !important;
+    
+}
+.hamburger{
+   display: none;
+   
+}
+.hamburger i {
+  font-size: 25px;
+  color: #55E4A5; 
+  cursor: pointer;
+  
+ 
+}
+.ham-menu {
+  position: absolute;
+  top: 70px; 
+  right: 40px; 
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  z-index: 999;
+  height: 80vh;
+  width: 50vw;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: none;
+}
+.ham-menu ul li {
+   
+    list-style: none;
+    padding: 50px 0;
+    
+}
+
+.ham-menu ul li a{
+  padding-left: 100px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.5s ease;
+ 
+ 
+}
+.ham-menu ul li a:hover{
+    color: #55E4A5;
+}
+
+
+
+
+
+
+
+
+@media (min-width:600px) and ( max-width:900px) {
+    
+.nav h2{
+    font-size: 2.6vw;
+}
+
+.nav ul li a{
+    font-size: 1.8vw;
+}
+     button{
+    
+    width: 16vw;
+    height: 6vh;
+    
+}
+
+
+
+}
+
+
+
+@media ( max-width:600px) {
+    .nav h2{
+    font-size: 3vw;
+}
+.hamburger{
+    display: inline-block;
+}
+.nav button{
+    display: none;
+}
+.nav .menu{
+    display: none;
+}
+.icons button{
+    display: inline;
+}
+.left p{
+    
+    font-size: 1.8vh;
+}
+
+
+
+}
+
+@media ( max-width:600px) {
+    .nav h2{
+    font-size: 3vh;
+}
+.hamburger{
+    display: inline-block;
+}
+.nav button{
+    display: none;
+}
+.nav .menu{
+    display: none;
+}
+.icons button{
+    display: inline;
+}
+.left p{
+    line-height: 2.3vh;
+    font-size: 1.8vh;
+}
+
+.icons{
+    margin-top: 2vh;
+    margin-left: 0;
+    
+}
+.icons button{
+    margin-left: 2vh;
+    width: 20vh;
+}
+
+
+
+}   
+
+
+
+
+@media ( max-width:600px) {
+    .nav h2{
+    font-size: 3vw;
+}
+.hamburger{
+    display: inline-block;
+}
+.nav button{
+    display: none;
+}
+.nav .menu{
+    display: none;
+}
+.icons button{
+    display: inline;
+}
+.left p{
+    
+    font-size: 1.8vh;
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media ( max-width:430px) {
+    .nav h2{
+    font-size: 3vh;
+}
+.hamburger{
+    display: inline-block;
+}
+.nav button{
+    display: none;
+}
+.nav .menu{
+    display: none;
+}
+.icons button{
+    display: inline;
+}
+.left p{
+    line-height: 2.5vh;
+    font-size: 2vh;
+}
+
+.icons{
+    margin-top: 2vh;
+    margin-left: 0;
+    
+}
+.icons button{
+    margin-left: 2vh;
+    width: 20vh;
+}
+
+.right{
+    display: none;
+}
+
+.left{
+      margin-top: 20vh;
+    width: 100%;
+    height: 100%;
+    padding: 5vw 5vw;
+
+}
+.left h1{
+    margin-left: 7vh;
+    font-size: 3.5vh;
+    line-height: 4vh;
+}
+
+.left h3{
+    font-size: 3vh;
+    line-height: 8vh;
+    margin-top: 3vh;
+}
+
+
+
+.ham-menu {
+  position: absolute;
+  top: 70px; 
+  right: 20px; 
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  z-index: 999;
+  height: 85vh;
+  width: 70vw;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: none;
+}
+.ham-menu ul li {
+   
+    list-style: none;
+    padding: 50px 0;
+    
+}
+
+.ham-menu ul li a{
+  padding-left: 60px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.5s ease;
+ 
+ 
+}
+
+
+}  
